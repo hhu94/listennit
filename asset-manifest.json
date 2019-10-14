@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/listennit/static/css/main.0154f281.chunk.css",
+    "main.js": "/listennit/static/js/main.9df109aa.chunk.js",
+    "main.js.map": "/listennit/static/js/main.9df109aa.chunk.js.map",
+    "runtime-main.js": "/listennit/static/js/runtime-main.34461cda.js",
+    "runtime-main.js.map": "/listennit/static/js/runtime-main.34461cda.js.map",
+    "static/js/2.70cf370c.chunk.js": "/listennit/static/js/2.70cf370c.chunk.js",
+    "static/js/2.70cf370c.chunk.js.map": "/listennit/static/js/2.70cf370c.chunk.js.map",
+    "index.html": "/listennit/index.html",
+    "precache-manifest.ec3000fb7bc376c4f648fe81b2930f2e.js": "/listennit/precache-manifest.ec3000fb7bc376c4f648fe81b2930f2e.js",
+    "service-worker.js": "/listennit/service-worker.js",
+    "static/css/main.0154f281.chunk.css.map": "/listennit/static/css/main.0154f281.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.34461cda.js",
+    "static/js/2.70cf370c.chunk.js",
+    "static/css/main.0154f281.chunk.css",
+    "static/js/main.9df109aa.chunk.js"
+  ]
+}
