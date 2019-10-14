@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/listennit/static/css/main.0154f281.chunk.css",
-    "main.js": "/listennit/static/js/main.9df109aa.chunk.js",
-    "main.js.map": "/listennit/static/js/main.9df109aa.chunk.js.map",
-    "runtime-main.js": "/listennit/static/js/runtime-main.34461cda.js",
-    "runtime-main.js.map": "/listennit/static/js/runtime-main.34461cda.js.map",
-    "static/js/2.70cf370c.chunk.js": "/listennit/static/js/2.70cf370c.chunk.js",
-    "static/js/2.70cf370c.chunk.js.map": "/listennit/static/js/2.70cf370c.chunk.js.map",
-    "index.html": "/listennit/index.html",
-    "precache-manifest.ec3000fb7bc376c4f648fe81b2930f2e.js": "/listennit/precache-manifest.ec3000fb7bc376c4f648fe81b2930f2e.js",
-    "service-worker.js": "/listennit/service-worker.js",
-    "static/css/main.0154f281.chunk.css.map": "/listennit/static/css/main.0154f281.chunk.css.map"
+    "main.css": "/static/css/main.0154f281.chunk.css",
+    "main.js": "/static/js/main.2c5959cc.chunk.js",
+    "main.js.map": "/static/js/main.2c5959cc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c6e41421.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c6e41421.js.map",
+    "static/js/2.cfb49127.chunk.js": "/static/js/2.cfb49127.chunk.js",
+    "static/js/2.cfb49127.chunk.js.map": "/static/js/2.cfb49127.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.20a273efbdd2c750eb624741f01aeb48.js": "/precache-manifest.20a273efbdd2c750eb624741f01aeb48.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.0154f281.chunk.css.map": "/static/css/main.0154f281.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.34461cda.js",
-    "static/js/2.70cf370c.chunk.js",
+    "static/js/runtime-main.c6e41421.js",
+    "static/js/2.cfb49127.chunk.js",
     "static/css/main.0154f281.chunk.css",
-    "static/js/main.9df109aa.chunk.js"
+    "static/js/main.2c5959cc.chunk.js"
   ]
 }
