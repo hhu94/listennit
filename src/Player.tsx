@@ -63,8 +63,10 @@ export const Player: React.FC<PlayerProps> = ({
 
   return (
     <Fragment>
-      <YouTubePlayer {...playerProps("youtube.com")} />
-      <SoundCloudPlayer {...playerProps("soundcloud.com")} />
+      <div className="react-players__hidden">
+        <YouTubePlayer {...playerProps("youtube.com")} />
+        <SoundCloudPlayer {...playerProps("soundcloud.com")} />
+      </div>
       <button
         onClick={() =>
           setCurrentSong(currentSong > 0 ? currentSong - 1 : currentSong)
