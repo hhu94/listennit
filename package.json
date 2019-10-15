@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sentry/browser": "^5.7.0",
     "@types/bluebird": "^3.5.27",
     "react": "^16.10.2",
     "react-async": "^8.0.0",
@@ -50,5 +51,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://listennit.hao.hu"
+  "homepage": "https://listennit.hao.hu"
 }

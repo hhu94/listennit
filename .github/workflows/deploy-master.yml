@@ -16,16 +16,33 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.11.x'
-        
+
     - name: install
       run: yarn install
       
     - name: build
-      run: yarn build
-      
+      run: |
+        REACT_APP_COMMIT_ID=$GITHUB_SHA
+        yarn build
+
     - name: deploy
       uses: peaceiris/actions-gh-pages@v2.5.0
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./build
+
+    - name: release new version to sentry
+      env:
+        SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        SENTRY_ORG: hao-hu
+      run: |
+        yarn add @sentry/cli
+        PATH=$PATH:./node_modules/bin
+        VERSION=$(sentry-cli releases propose-version)
+        sentry-cli releases new -p listennit $VERSION
+        sentry-cli releases set-commits --auto $VERSION
+        sentry-cli releases deploys $VERSION new -e production
+        
+
+      
