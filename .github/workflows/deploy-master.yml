@@ -38,7 +38,7 @@ jobs:
         SENTRY_ORG: hao-hu
       run: |
         yarn add @sentry/cli
-        PATH=$PATH:./node_modules/bin
+        PATH=$PATH:./node_modules/.bin
         VERSION=$(sentry-cli releases propose-version)
         sentry-cli releases new -p listennit $VERSION
         sentry-cli releases set-commits --auto $VERSION
