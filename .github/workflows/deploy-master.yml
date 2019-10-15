@@ -18,10 +18,15 @@ jobs:
         node-version: '12.11.x'
 
     - name: install
-      run: yarn install
+      run: |
+        yarn install
+        echo ::set-env name=PATH::$PATH:./node_modules/.bin
+
+    - name: set SENTRY_RELEASE
+      run: echo ::set-env name=SENTRY_RELEASE::$(sentry-cli releases propose-version)
       
     - name: build
-      run: REACT_APP_COMMIT_ID=$GITHUB_SHA yarn build
+      run: REACT_APP_SENTRY_RELEASE=$SENTRY_RELEASE yarn build
 
     - name: deploy
       uses: peaceiris/actions-gh-pages@v2.5.0
@@ -35,12 +40,9 @@ jobs:
         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
         SENTRY_ORG: hao-hu
       run: |
-        yarn add @sentry/cli
-        PATH=$PATH:./node_modules/.bin
-        VERSION=$(sentry-cli releases propose-version)
-        sentry-cli releases new -p listennit $VERSION
-        sentry-cli releases set-commits --auto $VERSION
-        sentry-cli releases deploys $VERSION new -e production
+        sentry-cli releases new -p listennit $SENTRY_RELEASE
+        sentry-cli releases set-commits --auto $SENTRY_RELEASE
+        sentry-cli releases deploys $SENTRY_RELEASE new -e production
         
 
       
