@@ -98,13 +98,6 @@ export const Player: React.FC<PlayerProps> = ({
         defaultValue={volume}
         onChange={e => setVolume(parseFloat(e.currentTarget.value))}
       />
-      <button
-        onClick={() => {
-          throw new Error("Why did you click this?");
-        }}
-      >
-        Don't click this
-      </button>
       <Playlist
         songs={songs}
         currentSong={currentSong}
